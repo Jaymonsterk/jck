@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>amis demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="./sdk/sdk.css" />
+    <style>
+        html,
+        body,
+        .app-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+		.text-align{
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+<div id="root" class="app-wrapper"></div>
+<script src="./sdk/sdk.js"></script>
+<script type="text/javascript">
+    (function () {
+        let amis = amisRequire('amis/embed');
+        // 通过替换下面这个配置来生成不同页面
+        let amisScoped = amis.embed('#root', {
+    "type": "page",
+    "body": [
+        {
+            "type": "plain",
+            "tpl": "菜单列表",
+            "inline": false,
+            "className": "h3  m-b-xs"
+        },
+        {
+            "type": "hbox",
+            "columns": [
+            ]
+        },
+        {
+            "type": "crud",
+            "columns": [
+                {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "这是标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false,
+                    "columnClassName": ""
+                },
+                {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "这是标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false
+                },
+                {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "这是标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false
+                },
+                {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "这是标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false
+                },
+                {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "这是标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false
+                },
+                {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "这是标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false
+                }
+            ],
+            "visible": "",
+            "api": "https://houtai.baidu.com/api/sample",
+            "mode": "cards",
+            "defaultParams": {
+                "perPage": 12
+            },
+            "quickSaveApi": "https://houtai.baidu.com/api/sample/bulkUpdate",
+            "quickSaveItemApi": "https://houtai.baidu.com/api/sample/$id",
+            "draggable": true,
+            "card": {
+                "body": {
+                    "type": "image",
+                    "src": "https://internal-amis-res.cdn.bcebos.com/images/2020-1/1578395692722/4f3cb4202335.jpeg@s_0,w_216,l_1,f_jpg,q_80",
+                    "title": "标题",
+                    "imageCaption": "",
+                    "thumbMode": "cover",
+                    "showDimensions": true,
+                    "enlargeAble": false,
+                    "className": "no-border"
+                },
+                "bodyClassName": "no-border",
+                "className": "no-border"
+            },
+            "placeholder": "",
+            "showHeader": false,
+            "showFooter": false,
+            "columnsCount": 5,
+            "messages": {
+            },
+            "headerToolbar": [
+            ],
+            "footerToolbar": [
+                {
+                    "type": "bulk-actions"
+                },
+                {
+                    "type": "switch-per-page"
+                }
+            ]
+        },
+        {
+            "type": "tpl",
+            "tpl": "台号：<span style='color:red'>${table}</span> Wifi: <span style='color:red'>${wifi}</span> 密码：<span style='color:red'>${password}</span>",
+            "inline": false,
+            "className": "h3 m-t m-b-xs"
+        },
+        {
+            "type": "button-toolbar",
+            "buttons": [
+                {
+                    "type": "button",
+                    "label": "菜单",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "弹框",
+                        "body": "这是个菜单的弹框。"
+                    },
+                    "level": "info",
+                    "className": "r-2x r text-md font-bold m"
+                },
+                {
+                    "type": "button",
+                    "className": "r-2x r text-md font-bold m",
+                    "label": "菜单",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "弹框",
+                        "body": "这是个菜单的弹框。"
+                    },
+                    "level": "info"
+                },
+                {
+                    "type": "button",
+                    "className": "r-2x r text-md font-bold m",
+                    "label": "菜单",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "弹框",
+                        "body": "这是个菜单的弹框。"
+                    },
+                    "level": "info"
+                },
+                {
+                    "type": "button",
+                    "className": "r-2x r text-md font-bold m",
+                    "label": "菜单",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "弹框",
+                        "body": "这是个菜单的弹框。"
+                    },
+                    "level": "info"
+                }
+            ]
+        },
+        {
+            "type": "page",
+            "data": {
+                "items": [
+                    {
+                        "engine": "Trident",
+                        "browser": "Internet Explorer 4.0",
+                        "platform": "Win 95+",
+                        "version": "4",
+                        "grade": "X"
+                    },
+                    {
+                        "engine": "Trident",
+                        "browser": "Internet Explorer 5.0",
+                        "platform": "Win 95+",
+                        "version": "5",
+                        "grade": "C"
+                    },
+                    {
+                        "engine": "Trident",
+                        "browser": "Internet Explorer 5.5",
+                        "platform": "Win 95+",
+                        "version": "5.5",
+                        "grade": "A"
+                    },
+                    {
+                        "engine": "Trident",
+                        "browser": "Internet Explorer 6",
+                        "platform": "Win 98+",
+                        "version": "6",
+                        "grade": "A"
+                    },
+                    {
+                        "engine": "Trident",
+                        "browser": "Internet Explorer 7",
+                        "platform": "Win XP SP2+",
+                        "version": "7",
+                        "grade": "A"
+                    }
+                ]
+            },
+            "body": [
+            ]
+        }
+    ],
+    "data": {
+        "table": "217",
+        "wifi": "Ck",
+        "password": "84532690",
+        "shop_name": "张村店"
+    },
+    "aside": [
+        {
+            "type": "tpl",
+            "tpl": "<span style='color:red;text-align:center;'>${shop_name}</span>"
+        },
+        {
+            "type": "button-toolbar",
+            "buttons": [
+                {
+                    "type": "button",
+                    "label": "结账",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "系统提示",
+                        "body": "对你点击了结账"
+                    },
+                    "level": "danger"
+                },
+                {
+                    "type": "button",
+                    "label": "代码落单",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "系统提示",
+                        "body": "对你点击了代码落单"
+                    },
+                    "level": "warning"
+                },
+                {
+                    "type": "button",
+                    "label": "服务",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "系统提示",
+                        "body": "对你点击了服务"
+                    },
+                    "level": "info"
+                },
+                {
+                    "type": "button",
+                    "label": "蒸分钟",
+                    "actionType": "dialog",
+                    "dialog": {
+                        "title": "系统提示",
+                        "body": "对你点击了蒸分钟"
+                    },
+                    "level": "success"
+                }
+            ],
+            "visible": "",
+            "visibleOn": ""
+        },
+        {
+            "type": "crud",
+            "api": "",
+            "messages": {
+            },
+            "mode": "table",
+            "columns": [
+                {
+                    "name": "id",
+                    "label": "ID",
+                    "type": "text"
+                },
+                {
+                    "name": "name",
+                    "label": "品名",
+                    "type": "text"
+                },
+                {
+                    "type": "text",
+                    "label": "数量",
+                    "name": "number"
+                },
+                {
+                    "type": "text",
+                    "label": "单位",
+                    "name": "unit"
+                }
+            ]
+        },
+        {
+            "type": "tpl",
+            "tpl": "<p>张村店</p>",
+            "inline": false
+        },
+        {
+            "type": "qrcode",
+            "value": "http://www.chaukee.net"
+        }
+    ]
+});
+    })();
+</script>
+</body>
+</html>
